@@ -1,0 +1,93 @@
+
+$max-with:100%;
+
+
+
+.main{
+    background-image: url("/assets/bgtwo.jpg");
+ 
+    width: $max-with;
+    height: $max-with;
+    margin: 0%;
+    padding: 20% 0%;
+    
+}
+
+
+
+.container{
+    max-width: 500px;
+
+   
+    margin-top: 2%;
+   
+   
+    
+    padding: 5% ;
+    background-color: rgba(5, 155, 255, 0.781);
+    border-radius: 7%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.container:hover{
+    box-shadow: rgba(243, 77, 105, 0.527) 0px 54px 55px, rgba(250, 99, 157, 0.418) 0px -12px 30px, rgba(250, 100, 205, 0.404) 0px 4px 6px, rgba(240, 78, 78, 0.63) 0px 12px 13px, rgba(248, 98, 203, 0.342) 0px -3px 5px;
+}
+
+
+.Font_SY{
+    color: white;
+    font-weight: 900;
+}
+
+.btn_Color{
+    color: white;
+    font-weight: 900;
+    border: solid;
+    border-radius: 20%;
+}
+
+.btn_Color:hover{
+    background-color: rgba(252, 42, 140, 0.795);
+   
+}
+.size{
+    margin-left: 10px;
+    max-width: 285px;
+    display:inline-block;
+}
+
+.size2{
+    width: 70px;
+}
+
+.select_input{
+    background-color: white;
+    border: none;
+    height: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+    .size {
+        max-width: 240px;
+    }
+  }
+
+  .sparate{
+      width: 42%;
+      margin: 10px;
+      display: inline-block;
+  }
+
+  input.ng-touched.ng-invalid{
+    border: 1px solid red;
+      box-shadow: rgba(243, 77, 77, 0.527) 0px 54px 55px, rgba(245, 67, 67, 0.644) 0px -12px 30px, rgba(250, 100, 205, 0.404) 0px 4px 6px, rgba(240, 78, 78, 0.63) 0px 12px 13px, rgba(248, 98, 203, 0.342) 0px -3px 5px;
+}
+
+.alert{
+    padding: 3px 5px 6px 5px;
+    color: white;
+    font-weight: 900;
+    background-color: rgb(104, 2, 19);
+    // text-shadow: rgba(243, 77, 77, 0.527) 0px 54px 55px, rgba(245, 67, 67, 0.644) 0px -12px 30px, rgba(250, 100, 205, 0.404) 0px 4px 6px, rgba(240, 78, 78, 0.63) 0px 12px 13px, rgba(248, 98, 203, 0.342) 0px -3px 5px;
+    
+}

@@ -1,0 +1,89 @@
+<div class="main">
+    <div class="container">
+        <form [formGroup]="formG" (ngSubmit) = "save()">
+
+            <div class="form-group">
+                <label for="exampleInputFirstName" class="Font_SY">First Name</label>
+                <input type="text" class="form-control" placeholder="First Name" required formControlName ="FirstName">
+                <span *ngIf = "formG.controls.FirstName.errors?.required && formG.controls.FirstName.touched " class="alert">FirstName required &#9888;</span>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputLastName" class="Font_SY">Last Name</label>
+              <input type="text" class="form-control" placeholder="Last Name" required formControlName ="LastName">
+              <span *ngIf = "formG.controls.LastName.errors?.required && formG.controls.LastName.touched " class="alert">LastName required &#9888;</span>
+          </div>
+            <div class="form-group">
+                <label for="exampleInputMiddleName" class="Font_SY">Middle Name</label>
+                <input type="text" class="form-control" placeholder="Middle Name" required formControlName ="MiddleName">
+                <span *ngIf = "formG.controls.MiddleName.errors?.required && formG.controls.MiddleName.touched " class="alert">MiddleName required &#9888;</span>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputAddress" class="Font_SY">Address</label>
+              <input type="text" class="form-control" placeholder="Address" required formControlName ="Address">
+              <span *ngIf = "formG.controls.Address.errors?.required && formG.controls.Address.touched " class="alert">Address required &#9888;</span>
+          </div>
+         
+        
+            <div class="form-group">
+              <label for="exampleInputEmail1" class="Font_SY">Email address</label>
+              <input type="email" class="form-control" placeholder="Enter email" required formControlName ="Email">
+              <span *ngIf = "formG.controls.Email.errors?.required && formG.controls.Email.touched " class="alert">Email required &#9888;</span>
+              
+            </div>
+           <div class="form-group">
+            <label class="Font_SY">Country</label>
+            <select class="select_input form-control" data-flag="true" >
+              <option *ngFor="let o of countryList ;let i = index" #num  (click)="setnow(num.value);GetStatelist(i)" [value]="o.callingCodes" class="country" >{{o.name}}</option>
+            </select>
+           </div>
+
+           <div class="form-group">
+            <label class="Font_SY">State</label>
+            <select  class="select_input form-control" data-flag="true" >
+              <option *ngFor="let o of balck ;let i=index" id="statem">{{o}}</option>
+            </select>
+
+           </div>
+   
+                
+            <div class="form-group">
+              <label for="exampleInputZipCode" class="Font_SY">Zip Code</label>
+              <input type="text" class="form-control"  placeholder="Enter Zip Code" required formControlName ="ZipCode">
+              <span *ngIf = "formG.controls.ZipCode.errors?.required && formG.controls.ZipCode.touched " class="alert">Zip Code required &#9888;</span>
+              
+            </div>
+            
+            <div class="form-group">
+            
+              
+              <label for="exampleInputPhoneNumber" class="Font_SY">Phone Number</label>
+              <div>
+                <label class=" nu btn btn_Color size2" id="call">+93</label>
+                <input type="text" class="form-control size"  placeholder="Enter Phone Number" required formControlName ="PhoneNumber">
+                <span *ngIf = "formG.controls.PhoneNumber.errors?.required && formG.controls.PhoneNumber.touched " class="alert">Phone Number required &#9888;</span>
+              </div>
+             
+              
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputHeight" class="Font_SY  sparate">Height</label>
+              <label for="exampleInputWeight" class="Font_SY  sparate">Weight</label>
+              <input type="text" class="form-control sparate"  placeholder="Enter Height" required formControlName ="Height">
+              <span *ngIf = "formG.controls.Height.errors?.required && formG.controls.Height.touched " class="alert">Height required &#9888;</span>
+              <input type="text" class="form-control sparate"  placeholder="Enter Weight" required formControlName ="Weight">
+              <span *ngIf = "formG.controls.Weight.errors?.required && formG.controls.Weight.touched " class="alert">Weight required &#9888;</span>
+              
+            </div>
+       
+            <button type="submit" class="btn btn_Color" >Save</button>
+          </form>
+          
+    </div>
+</div>
+
+<!-- <div>
+  <div>
+    <button *ngFor="let o of countryList ;let i=index " >{{o.name}}{{i}}</button ><button   *ngFor="let o of balck  ;let i=index " >{{o}}{{i}}</button >
+  </div>
+</div> -->

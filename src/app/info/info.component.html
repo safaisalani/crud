@@ -1,0 +1,36 @@
+
+
+
+
+
+<div>
+<h3>User Detail</h3>
+<table class="table table-hover table-sm">
+    <thead class="thead-dark">
+      <tr>
+        <!-- <th>Id</th> -->
+        <th>Firstname</th>
+        <th>LastName</th>
+        <th>MiddleName</th>
+        <th>PhoneNumber</th>
+        <th>Address</th>
+        <th>Height</th>
+        <th>Weight></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let User of Userlist">
+          <!-- <td>{{User.id}}</td> -->
+          <td>{{User.FirstName}}</td>
+          <td>{{User.LastName}}</td>
+          <td>{{User.MiddleName}}</td>
+          <td>{{User.PhoneNumber}}</td>
+          <td>{{User.Address}}</td>
+          <td>{{User.Email}}</td>
+          <td>{{User.Weight}}</td>
+          <td>{{User.Height}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
